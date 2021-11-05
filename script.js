@@ -43,7 +43,7 @@ document.querySelectorAll(".add_btn").forEach((btn) => {
       closeArea.style.display = "none";
       openAddCard.style.display = "flex";
       deleteCurrentList();
-      a();
+      Drag_Drop();
     } else {
       alert("The field can not be empty!");
     }
@@ -62,7 +62,7 @@ function deleteCurrentList() {
 deleteCurrentList();
 
 //Drag & Drop
-function a() {
+function Drag_Drop() {
   let draggables = document.querySelectorAll(".draggable");
   let containers = document.querySelectorAll(".container");
 
@@ -108,4 +108,4 @@ function a() {
     ).element;
   }
 }
-a();
+Drag_Drop();
