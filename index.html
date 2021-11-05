@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="holder">
+      <div class="header"><h1>Trello</h1></div>
+      <div class="trello_boards">
+        <div class="item">
+          <div class="title">
+            <p class="heading" contenteditable="true">Backlog</p>
+            <div class="container_list container">
+              <div class="list_card_parent draggable" draggable="true">
+                <p class="list_card">Bonus Zadatak 1</p>
+                <img
+                  src="images/delete_icon.png"
+                  alt="delete_icon"
+                  width="30px"
+                  class="deleteCard"
+                />
+              </div>
+            </div>
+
+            <div class="form" id="form" style="display: none">
+              <textarea
+                placeholder="Enter a title for this card"
+                id="textarea"
+                class="textarea"
+              ></textarea>
+              <div class="buttons">
+                <button class="add_btn">Add card</button>
+                <button class="cancel_btn" id="cancel_btn">Cancel</button>
+              </div>
+            </div>
+            <div class="add_card" id="add_card">
+              <span>+</span>
+              <p>Add a card</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+            <div class="title">
+              <p class="heading" contenteditable="true">In progress</p>
+              <div class="container_list container">
+                <div class="list_card_parent draggable" draggable="true">
+                  <p class="list_card">Bonus Zadatak 2</p>
+                  <img
+                    src="images/delete_icon.png"
+                    alt="delete_icon"
+                    width="30px"
+                    class="deleteCard"
+                  />
+                </div>
+              </div>
+  
+              <div class="form" id="form" style="display: none">
+                <textarea
+                  placeholder="Enter a title for this card"
+                  id="textarea"
+                  class="textarea"
+                ></textarea>
+                <div class="buttons">
+                  <button class="add_btn">Add card</button>
+                  <button class="cancel_btn" id="cancel_btn">Cancel</button>
+                </div>
+              </div>
+              <div class="add_card" id="add_card">
+                <span>+</span>
+                <p>Add a card</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="title">
+              <p class="heading" contenteditable="true">Complete</p>
+              <div class="container_list container">
+                <div class="list_card_parent draggable" draggable="true">
+                  <p class="list_card">Bonus Zadatak 3</p>
+                  <img
+                    src="images/delete_icon.png"
+                    alt="delete_icon"
+                    width="30px"
+                    class="deleteCard"
+                  />
+                </div>
+              </div>
+  
+              <div class="form" id="form" style="display: none">
+                <textarea
+                  placeholder="Enter a title for this card"
+                  id="textarea"
+                  class="textarea"
+                ></textarea>
+                <div class="buttons">
+                  <button class="add_btn">Add card</button>
+                  <button class="cancel_btn" id="cancel_btn">Cancel</button>
+                </div>
+              </div>
+              <div class="add_card" id="add_card">
+                <span>+</span>
+                <p>Add a card</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="title">
+              <p class="heading" contenteditable="true">On hold</p>
+              <div class="container_list container">
+                <div class="list_card_parent draggable" draggable="true">
+                  <p class="list_card">Bonus Zadatak 4</p>
+                  <img
+                    src="images/delete_icon.png"
+                    alt="delete_icon"
+                    width="30px"
+                    class="deleteCard"
+                  />
+                </div>
+              </div>
+  
+              <div class="form" id="form" style="display: none">
+                <textarea
+                  placeholder="Enter a title for this card"
+                  id="textarea"
+                  class="textarea"
+                ></textarea>
+                <div class="buttons">
+                  <button class="add_btn">Add card</button>
+                  <button class="cancel_btn" id="cancel_btn">Cancel</button>
+                </div>
+              </div>
+              <div class="add_card" id="add_card">
+                <span>+</span>
+                <p>Add a card</p>
+              </div>
+            </div>
+          </div>
+       
+        
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 70px;
+}
+.holder {
+  height: 100vh;
+  background-image: url("images/trello_background_img.jpg");
+  background-position: 50%;
+  background-size: cover;
+}
+.trello_boards {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.item {
+  width: 270px;
+  background-color: #ebecf0;
+  border-radius: 4px;
+  margin: 0 20px 20px;
+  padding: 12px;
+}
+.heading {
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #172b4d;
+  font-family: Segoe, Roboto, Noto Sans, Droid Sans, sans-serif;
+}
+.list_card {
+  width: 85%;
+}
+/*.list_card {
+  font-family: Segoe, Roboto, Noto Sans, Droid Sans, sans-serif;
+  font-size: 14px;
+  background-color: #fefefe;
+  border-radius: 4px;
+  margin: 10px 0;
+  box-shadow: 0 1px 0 #091e4240;
+  opacity: 0.9;
+  word-break: break-word;
+  cursor: pointer;
+  padding: 10px;
+}*/
+.form textarea {
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  resize: none;
+  height: 70px;
+  box-shadow: 0 1px 0 #091e4240;
+  margin-bottom: 5px;
+}
+.buttons {
+  display: flex;
+}
+.buttons .add_btn {
+  width: 50%;
+  margin-right: 12px;
+  background-color: #0079bf;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.buttons .add_btn:hover {
+  background: #075988;
+}
+.buttons .cancel_btn {
+  margin-right: 12px;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.buttons .cancel_btn:hover {
+  background-color: #c51414;
+}
+.add_card {
+  font-family: Segoe, Roboto, Noto Sans, Droid Sans, sans-serif;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #5e6c84;
+  padding-left: 15px;
+  border-radius: 4px;
+}
+.add_card span {
+  margin-right: 4px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.add_card:hover {
+  background: rgba(155, 155, 155, 0.3);
+  cursor: pointer;
+}
+
+.deleteCard {
+  position: absolute;
+  left: 85%;
+  top: 4px;
+  cursor: pointer;
+  width: 30px;
+}
+.container_list {
+  min-height: 35px;
+}
+.list_card_parent {
+  position: relative;
+  font-family: Segoe, Roboto, Noto Sans, Droid Sans, sans-serif;
+  font-size: 14px;
+  background-color: #fefefe;
+  border-radius: 4px;
+  margin: 10px 0;
+  box-shadow: 0 1px 0 #091e4240;
+  opacity: 0.9;
+  word-break: break-word;
+  cursor: pointer;
+  padding: 10px;
+}
+.draggable.dragging {
+  opacity: 0.5;
+}
