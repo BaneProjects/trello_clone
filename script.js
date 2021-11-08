@@ -42,6 +42,7 @@ document.querySelectorAll(".add_btn").forEach((btn) => {
       currentList.append(parent);
       closeArea.style.display = "none";
       openAddCard.style.display = "flex";
+      LocalStorageData();
       deleteCurrentList();
       Drag_Drop();
     } else {
@@ -56,10 +57,12 @@ function deleteCurrentList() {
     btn.addEventListener("click", (el) => {
       currList = el.target.parentElement;
       currList.remove();
+
+      LocalStorageData();
     });
   });
 }
-deleteCurrentList();
+//deleteCurrentList();
 
 //Drag & Drop
 function Drag_Drop() {
@@ -86,6 +89,7 @@ function Drag_Drop() {
       } else {
         container.insertBefore(draggable, afterElement);
       }
+      LocalStorageData();
     });
   });
 
@@ -108,4 +112,40 @@ function Drag_Drop() {
     ).element;
   }
 }
-Drag_Drop();
+
+function LocalStorageData() {
+  const data = [];
+  const all_column = document.querySelectorAll(".item");
+
+  all_column.forEach((column, index) => {
+    const title = column.querySelector(".heading").textContent;
+    const cardItems = column.querySelectorAll(".list_card_parent");
+
+    const cardItemsContent = [];
+
+    cardItems.forEach((item) => {
+      return cardItemsContent.push(item.textContent);
+    });
+    data.push({ title: title, items: cardItemsContent });
+  });
+  localStorage.setItem("data", JSON.stringify(data));
+}
+
+window.addEventListener("load", function () {
+  const dataFromStorage = localStorage.getItem("data");
+  const parsedData = JSON.parse(dataFromStorage);
+  const columns = document.querySelectorAll(".title");
+  parsedData.forEach((column, index) => {
+    const currAddACard = columns.item(index).querySelector(".container");
+    column.items.forEach((item) => {
+      const itemDiv = document.createElement("div");
+      itemDiv.innerHTML = `<div class="list_card_parent draggable" draggable="true"><div class="list_card">${item}
+      </div>
+      <img src="images/delete_icon.png" class="deleteCard">
+      </div>`;
+      columns.item(index).insertBefore(itemDiv, currAddACard);
+    });
+    Drag_Drop();
+    deleteCurrentList();
+  });
+});
